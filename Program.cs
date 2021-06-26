@@ -1,23 +1,25 @@
 ﻿using System;
 
-namespace Variables
+namespace CSharpFundamentals
 {
+    public class Person
+    {
+        public string FirstName;
+        public string LastName;
+
+        public void Introduce()
+        {
+            Console.WriteLine("My name is " + " " + FirstName + " " + LastName);
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            byte number = 5;
-            int count = 20;
-            float totalPrice = 10.89f;
-            char character = 'A';
-            string firstName = "Uma";
-            bool isWorking = true;
-            Console.WriteLine(number);
-            Console.WriteLine(count);
-            Console.WriteLine(totalPrice);
-            Console.WriteLine(character);
-            Console.WriteLine(firstName);
-            Console.WriteLine(isWorking);
+            var uma = new Person();
+            uma.FirstName = "Uma";
+            uma.LastName = "Thileepan";
+            uma.Introduce();
         }
     }
 }
